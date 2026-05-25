@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vitalize — Your Healthy Lifestyle App</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-blob"></div>
+  <div class="hero-blob2"></div>
+  <nav class="nav">
+    <div class="logo">Vita<span>lize</span></div>
+    <button class="nav-cta" onclick="document.querySelector('.cta-section').scrollIntoView({behavior:'smooth'})">Sign Up Free</button>
+  </nav>
+  <div class="hero-content">
+    <div class="hero-badge">Trusted by 500K+ members</div>
+    <h1>Your Journey to a <em>Healthier</em> You Starts Here</h1>
+    <p class="hero-sub">Personalized meal plans, guided workouts & expert coaching — designed for real people with real goals.</p>
+  </div>
+  <div class="hero-img-placeholder">
+    <div class="float-chip chip1"><span class="chip-val">-12 lbs</span>in 6 weeks</div>
+    <div class="float-chip chip2"><span class="chip-val">98%</span>satisfaction</div>
+    <div class="food-art">
+      <div class="food-item">
+        <div class="emoji">🥗</div>
+        <div class="food-label">Meal Plans</div>
+      </div>
+      <div class="food-item food-item--mid">
+        <div class="emoji">🏃‍♀️</div>
+        <div class="food-label">Workouts</div>
+      </div>
+      <div class="food-item">
+        <div class="emoji">💧</div>
+        <div class="food-label">Hydration</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SIGN UP FORM -->
+<div class="cta-section">
+  <div class="cta-title">Start for Free Today</div>
+  <div class="cta-sub">Join 500,000+ people transforming their health</div>
+  <div class="form-row">
+    <input class="inp" id="name" type="text" placeholder="Your full name" />
+    <input class="inp" id="email" type="email" placeholder="Email address" />
+    <div class="select-wrap">
+      <select class="inp" id="goal">
+        <option value="" disabled selected>My main goal is...</option>
+        <option>Lose weight &amp; tone up</option>
+        <option>Eat healthier &amp; balanced</option>
+        <option>Build muscle &amp; strength</option>
+        <option>Boost energy &amp; mood</option>
+        <option>Manage a health condition</option>
+      </select>
+    </div>
+  </div>
+  <button class="cta-btn" id="signupBtn" onclick="handleSignup()">✦ Sign Up for Free</button>
+  <div class="free-tag">No credit card required · <span>Cancel anytime</span> · 7-day results guarantee</div>
+  <div class="success-msg" id="successMsg">🎉 Welcome aboard! Check your inbox to get started.</div>
+</div>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-num">500K+</div>
+    <div class="stat-label">Active Members</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">4.9★</div>
+    <div class="stat-label">App Store Rating</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">200+</div>
+    <div class="stat-label">Expert Recipes</div>
+  </div>
+</div>
+
+<!-- APP DOWNLOAD -->
+<div class="section-wrap">
+  <div class="section-label">Download the App</div>
+  <div class="section-title">Take wellness with you, everywhere</div>
+  <div class="app-btns">
+    <a href="#" class="app-btn">
+      <div class="app-btn-icon"></div>
+      <div class="app-btn-text">
+        <span class="app-btn-sub">Download on the</span>
+        <span class="app-btn-main">App Store</span>
+      </div>
+    </a>
+    <a href="#" class="app-btn">
+      <div class="app-btn-icon">▶</div>
+      <div class="app-btn-text">
+        <span class="app-btn-sub">Get it on</span>
+        <span class="app-btn-main">Google Play</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div class="section-wrap">
+  <div class="section-label">What you get</div>
+  <div class="feat-card">
+    <div class="feat-icon g">🥦</div>
+    <div>
+      <div class="feat-title">Personalized Meal Plans</div>
+      <div class="feat-desc">AI-powered nutrition plans tailored to your diet type, allergies, and calorie goals — keto, vegan, Mediterranean &amp; more.</div>
+    </div>
+  </div>
+  <div class="feat-card">
+    <div class="feat-icon g2">💪</div>
+    <div>
+      <div class="feat-title">Guided Workout Programs</div>
+      <div class="feat-desc">Home or gym workouts designed by certified trainers. From beginner yoga to HIIT — no equipment needed to start.</div>
+    </div>
+  </div>
+  <div class="feat-card">
+    <div class="feat-icon g3">📊</div>
+    <div>
+      <div class="feat-title">Progress Tracking</div>
+      <div class="feat-desc">Log your meals, steps, water &amp; weight. Visual dashboards celebrate every milestone on your journey.</div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<div class="section-wrap">
+  <div class="section-label">Real Results</div>
+  <div class="section-title">What our members say</div>
+  <div class="review-card">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-text">"I lost 18 lbs in 8 weeks following the meal plans. I never felt hungry or deprived. The recipes are actually delicious — even my kids eat them!"</div>
+    <div class="review-author">
+      <div class="avatar av1">AK</div>
+      <div>
+        <div class="review-name">Amina K.</div>
+        <div class="review-goal">Lost 18 lbs · Weight Loss Goal</div>
+      </div>
+    </div>
+  </div>
+  <div class="review-card">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-text">"As a diabetic, I needed something that tracked my carbs properly. Vitalize is the only app that genuinely understands my needs. My A1C improved significantly."</div>
+    <div class="review-author">
+      <div class="avatar av2">DM</div>
+      <div>
+        <div class="review-name">David M.</div>
+        <div class="review-goal">Managing Type 2 Diabetes</div>
+      </div>
+    </div>
+  </div>
+  <div class="review-card">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-text">"The workout plans are incredible. I work out at home with zero equipment and I've never felt stronger or more energetic in my life."</div>
+    <div class="review-author">
+      <div class="avatar av3">SN</div>
+      <div>
+        <div class="review-name">Sara N.</div>
+        <div class="review-goal">Home Fitness · Energy Goal</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST BADGES -->
+<div class="section-wrap">
+  <div class="section-label">Why trust us</div>
+  <div class="trust-row">
+    <div class="badge"><span class="badge-icon">🔒</span>256-bit SSL Secure</div>
+    <div class="badge"><span class="badge-icon">🩺</span>Doctor Reviewed</div>
+    <div class="badge"><span class="badge-icon">🏅</span>HIPAA Compliant</div>
+    <div class="badge"><span class="badge-icon">⭐</span>4.9 App Store</div>
+    <div class="badge"><span class="badge-icon">🔄</span>Cancel Anytime</div>
+    <div class="badge"><span class="badge-icon">✅</span>Dietitian Approved</div>
+  </div>
+  <div class="press-row">
+    <span class="press-label">As seen in</span>
+    <div class="press-logos">
+      <span class="press-logo">FORBES</span>
+      <span class="press-logo">VOGUE</span>
+      <span class="press-logo">HEALTH</span>
+      <span class="press-logo">TIME</span>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="final-cta">
+  <h2>Ready to Transform Your Life?</h2>
+  <p>Join half a million people who chose to put their health first. Your best self is one tap away.</p>
+  <button class="final-btn" onclick="document.querySelector('.cta-section').scrollIntoView({behavior:'smooth'})">✦ Get Started — It's Free</button>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>By signing up you agree to our <a href="#">Terms</a> &amp; <a href="#">Privacy Policy</a></p>
+  <p class="footer-copy">© 2026 Vitalize Health Inc. · <a href="#">Unsubscribe</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
